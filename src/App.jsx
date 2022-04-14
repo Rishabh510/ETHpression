@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import Moralis from "moralis/dist/moralis.min.js";
 import "./App.css";
+// import "dotenv/config";
 
 function App() {
-  const appId = "kXjoOhQniSv6NAkrlceELZFoafLjL5C1xANVV30w";
-  const serverUrl = "https://deoqbw6qywmq.usemoralis.com:2053/server";
+  const appId = import.meta.env.VITE_APPID;
+  const serverUrl = import.meta.env.VITE_SERVERURL;
   const [user, setUser] = useState();
   const [nft, setNft] = useState("");
 
